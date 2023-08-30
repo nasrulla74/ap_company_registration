@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem name="Company Registration" id="menu_company_reg_root" sequence="30"
+        />
+
+    <menuitem
+            id="company_main_menu"
+            parent="menu_company_reg_root" sequence="3"
+            action="ap_company_reg_action"
+            name="Companies"/>
+
+</odoo>
