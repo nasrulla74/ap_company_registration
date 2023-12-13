@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="ap_article_association2">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="o">
+                <t t-call="web.external_layout">
+
+                        <div class="page">
+                            <h6 class="text-decoration-underline py-2" style="text-align:center;">ARTICLE OF ASSOCIATION</h6>
+                            <h6 class="text-decoration-underline" style="text-align:center;">OF</h6>
+                            <h6 class="text-decoration-underline" style="text-align:center;"><span><t t-esc="o.name"/></span></h6>
+
+                            <p>First: The Company is a private limited company. </p>
+                            <p>Second: The registered office of the company shall be at <span><t t-esc="o.registered_address"/></span></p>
+                            <p>Third: The objects for which the company is established are:</p>
+
+                            <table class="mt-0">
+                                  <tbody>
+
+                                       <t t-foreach="o.objective_ids" t-as="oj">
+                                            <tr>
+                                              <td class="py-1" style="width:150pt; font-size: 17px;" valign="center"><t t-esc="oj.obj_code"/></td>
+                                              <td class="py-1" style="width:1900pt; font-size: 17px;" valign="left"><t t-esc="oj.name"/></td>
+                                            </tr>
+                                        </t>
+                                  </tbody>
+                                </table>
+
+                            <p>Fourth: The liability of the members is limited. </p>
+                            <p>Fifth: The authorized capital of the Company is Maldivian Rufiyaa <span><t t-esc="o.capital"/></span>
+                                (<span><t t-esc="o.capital_text"/></span>) divided into <span><t t-esc="o.face_value"/></span>
+                                ordinary shares of nominal value of Maldivian Rufiyaa <span><t t-esc="o.no_of_shares"/></span>
+                                (<span><t t-esc="o.share_text"/></span>) each.
+                               </p>
+                            <p>We, the several persons whose names and addresses are subscribed are desirous of being formed into
+                                a Company in pursuance of this Memorandum of Association, and we respectively agree to take the
+                                number of shares in the capital of the Company set opposite our respective names.</p>
+
+
+                        <div>
+                            <t t-foreach="o.director_ids" t-as="d">
+                                        <div>
+                                            <span class="mt-200 ml-20"><t t-esc="d.name"/></span>
+                                        </div>
+                            </t>
+                        </div>
+
+                       </div>
+                </t>
+            </t>
+        </t>
+
+
+
+    </template>
+
+</odoo>

@@ -6,11 +6,52 @@
         <field name="report_type">qweb-pdf</field>
         <field name="report_name">ap_company_registration.ap_memorandum</field>
         <field name="report_file">ap_company_registration.ap_memorandum</field>
-        <field name="print_report_name">'Print Memorandum - %s' % (object.name).replace('/', '')</field>
+        <field name="print_report_name">'Print MOA - %s' % (object.name).replace('/', '')</field>
+        <field name="binding_model_id" ref="model_ap_company_reg"/>
+        <field name="binding_type">report</field>
+    </record>
+    <record id="ap_company_article_association2" model="ir.actions.report">
+        <field name="name">Article Association</field>
+        <field name="model">ap.company.reg</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">ap_company_registration.ap_article_association2</field>
+        <field name="report_file">ap_company_registration.ap_article_association2</field>
+        <field name="print_report_name">'Print AOA - %s' % (object.name).replace('/', '')</field>
         <field name="binding_model_id" ref="model_ap_company_reg"/>
         <field name="binding_type">report</field>
     </record>
 
+    <record id="ap_company_md_declaration" model="ir.actions.report">
+        <field name="name">MD Declaration</field>
+        <field name="model">ap.company.reg</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">ap_company_registration.ap_md_declaration</field>
+        <field name="report_file">ap_company_registration.ap_md_declaration</field>
+        <field name="print_report_name">'Print md_dec - %s' % (object.name).replace('/', '')</field>
+        <field name="binding_model_id" ref="model_ap_company_reg"/>
+        <field name="binding_type">report</field>
+    </record>
 
+    <record id="ap_company_secretary_declaration" model="ir.actions.report">
+        <field name="name">Secretary Declaration</field>
+        <field name="model">ap.company.reg</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">ap_company_registration.ap_secretary_declaration</field>
+        <field name="report_file">ap_company_registration.ap_secretary_declaration</field>
+        <field name="print_report_name">'Print sec_dec - %s' % (object.name).replace('/', '')</field>
+        <field name="binding_model_id" ref="model_ap_company_reg"/>
+        <field name="binding_type">report</field>
+    </record>
+
+    <record id="ap_company_tax_declaration" model="ir.actions.report">
+        <field name="name">Tax Declaration</field>
+        <field name="model">ap.company.reg</field>
+        <field name="report_type">qweb-pdf</field>
+        <field name="report_name">ap_company_registration.ap_tax_declaration</field>
+        <field name="report_file">ap_company_registration.ap_tax_declaration</field>
+        <field name="print_report_name">'Print tax_dec - %s' % (object.name).replace('/', '')</field>
+        <field name="binding_model_id" ref="model_ap_company_reg"/>
+        <field name="binding_type">report</field>
+    </record>
 
 </odoo>

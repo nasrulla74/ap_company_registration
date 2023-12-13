@@ -16,6 +16,10 @@
         'views/company_reg_view.xml',
         'views/menu.xml',
         'report/memorandum.xml',
+        'report/article_association.xml',
+        'report/md_declaration.xml',
+        'report/secretary_declaration.xml',
+        'report/tax_declaration.xml',
         'report/report.xml',
 
     ],
